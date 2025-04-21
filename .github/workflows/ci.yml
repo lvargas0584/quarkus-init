@@ -10,4 +10,5 @@ jobs:
   run-tests:
     uses: lvargas0584/shared-workflows/.github/workflows/build-template.yml@master
     with:
-      java-version: '11'
+      runs-on: 'ubuntu-24.03'
+      java-version: '21'
