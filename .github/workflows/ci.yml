@@ -1,25 +1,14 @@
-## A basic GitHub Actions workflow for your Quarkus application.
-
-name: CI build
+name: CI Tests
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
   pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up JDK 21
-        uses: actions/setup-java@v4
-        with:
-          java-version: 21
-          distribution: temurin
-          cache: maven
-
-      - name: Build
-        run: ./mvnw verify -B
+  run-tests:
+    uses: lvargas0584/shared-workflows/.github/workflows/build-template.yml@master
+    with:
+      runs-on: 'ubuntu-24.04'
+      java-version: '21'
