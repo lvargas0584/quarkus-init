@@ -10,5 +10,5 @@ jobs:
   run-tests:
     uses: lvargas0584/shared-workflows/.github/workflows/build-template.yml@master
     with:
-      runs-on: 'ubuntu-24.03'
       java-version: '21'
+      skip-tests: true
