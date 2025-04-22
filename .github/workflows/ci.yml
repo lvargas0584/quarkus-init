@@ -11,4 +11,3 @@ jobs:
     uses: lvargas0584/shared-workflows/.github/workflows/build-template.yml@master
     with:
       java-version: '21'
-      skip-tests: true
